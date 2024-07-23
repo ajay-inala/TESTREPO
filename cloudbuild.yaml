@@ -16,8 +16,17 @@ steps:
       - '-c'
       - |        
         terraform init
+        
+  # Step 3: Validate Terraform
+  - name: 'hashicorp/terraform:latest'
+    id: 'Terraform Validate'
+    entrypoint: 'sh'
+    args:
+      - '-c'
+      - |        
+        terraform fmt
 
-  # Step 3: Terraform Plan (Optional, for dry-run)
+  # Step 4: Terraform Plan (Optional, for dry-run)
   - name: 'hashicorp/terraform:latest'
     id: 'Terraform Plan'
     entrypoint: 'sh'
@@ -26,7 +35,7 @@ steps:
       - |   
         terraform plan
 
-  # Step 4: Terraform Apply
+  # Step 5: Terraform Apply
   - name: 'hashicorp/terraform:latest'
     id: 'Terraform Apply'
     entrypoint: 'sh'
