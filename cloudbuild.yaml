@@ -37,4 +37,7 @@ steps:
       - |
         
         terraform apply -auto-approve
+options:
+   logging: NONE
+
 
