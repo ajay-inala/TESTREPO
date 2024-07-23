@@ -1,5 +1,5 @@
-resource "google_storage_bucket" "auto-expire" {
-  name          = "no-public-access-bucket"
+resource "google_storage_bucket" "Test-Bucket" {
+  name          = "Test-bucket"
   location      = "US"
   force_destroy = true
 
