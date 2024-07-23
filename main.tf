@@ -7,7 +7,7 @@ provider "google" {
 
 resource "google_storage_bucket" "Test-Bucket" {
   name          = "Test-bucket"
-  location      = "us-central1"
+  location      = "US"
   force_destroy = true
   public_access_prevention = "enforced"
 }
