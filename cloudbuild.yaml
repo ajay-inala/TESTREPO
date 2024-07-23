@@ -14,8 +14,7 @@ steps:
     entrypoint: 'sh'
     args:
       - '-c'
-      - |
-        
+      - |        
         terraform init
 
   # Step 3: Terraform Plan (Optional, for dry-run)
@@ -24,8 +23,7 @@ steps:
     entrypoint: 'sh'
     args:
       - '-c'
-      - |
-        
+      - |   
         terraform plan
 
   # Step 4: Terraform Apply
@@ -34,8 +32,7 @@ steps:
     entrypoint: 'sh'
     args:
       - '-c'
-      - |
-        
+      - |  
         terraform apply -auto-approve
 options:
    logging: CLOUD_LOGGING_ONLY
