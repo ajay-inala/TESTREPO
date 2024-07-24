@@ -1,10 +1,6 @@
-variable "secrets" {
-   default     = "secrets.json"
-  }
 provider "google" {
   project     = "Project-cicd-testing"
   region      = "us-central1"
-  credentials = "${file("${var.secrets}")}"
 }
 resource "google_compute_instance" "terraform" {
   name         = "terraform"
