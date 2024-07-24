@@ -8,6 +8,10 @@ resource "google_storage_bucket" "test-bucket" {
   force_destroy = true
   public_access_prevention = "enforced"
 }
+resource "google_service_account" "default" {
+account_id   = "Default compute service account"
+display_name = "Custom SA for VM Instance"
+}
 resource "google_compute_instance" "terraform" {
   name         = "terraform"
   machine_type = "e2-micro"
