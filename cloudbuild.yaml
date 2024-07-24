@@ -34,6 +34,8 @@ steps:
       - '-c'
       - |   
         terraform plan
+     env:
+        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.TF_API_TOKEN }}
 
   # Step 5: Terraform Apply
   - name: 'hashicorp/terraform:latest'
@@ -43,6 +45,8 @@ steps:
       - '-c'
       - |  
         terraform apply -auto-approve
+    env:
+       GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.TF_API_TOKEN }}
 options:
    logging: CLOUD_LOGGING_ONLY
    default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
