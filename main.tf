@@ -8,3 +8,12 @@ resource "google_storage_bucket" "test-bucket" {
   force_destroy = true
   public_access_prevention = "enforced"
 }
+resource "google_compute_instance" "terraform" {
+  name         = "terraform"
+  machine_type = "e2-micro"
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-11"
+    }
+  }
+}
