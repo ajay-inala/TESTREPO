@@ -1,4 +1,5 @@
 provider "google" {
+  credentials = file("secrets.json")
   project     = "Project-cicd-testing"
   region      = "us-central1"
 }
