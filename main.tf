@@ -11,6 +11,7 @@ resource "google_storage_bucket" "test-bucket" {
 resource "google_compute_instance" "terraform" {
   name         = "terraform"
   machine_type = "e2-micro"
+  zone         = "us-central1-a"
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-11"
