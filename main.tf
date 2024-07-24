@@ -9,7 +9,7 @@ resource "google_storage_bucket" "test-bucket" {
   public_access_prevention = "enforced"
 }
 resource "google_service_account" "default" {
-account_id   = "Default compute service account"
+account_id   = "233044675135-compute@developer.gserviceaccount.com"
 display_name = "Custom SA for VM Instance"
 }
 resource "google_compute_instance" "terraform" {
