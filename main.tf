@@ -17,3 +17,8 @@ resource "google_compute_instance" "terraform" {
     }
   }
 }
+network_interface {
+    network = "default"
+    access_config {
+    }
+}
