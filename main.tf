@@ -3,7 +3,7 @@ provider "google" {
   region      = "us-central1"         
 }
 resource "google_storage_bucket" "test-bucket2" {
-  name          = "inala-storage-bucket3"
+  name          = "inala-storage-bucket4"
   location      = "us-central1"
   force_destroy = true
   public_access_prevention = "enforced"
